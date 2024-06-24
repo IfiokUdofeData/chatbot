@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+
+    width: 30vw;
+    height: 80vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+}
+
+.messages{
+    height: 62vh;
+    height: 500px;
+    overflow-y: auto;
+    /* margin-bottom: 1em; */
+    text-align: start;
+    padding: 1em;
+    border: 1px solid #ccc;
+    /* border-radius: 10px; */
+    background-color: #f9f9f9;
+    /* position: relative; */
+}
+
+
+
+
+header {
+
+    /* margin: -10px; */
+    width: 100%;
+    background-color: #222224;
+    color: white;
+    padding: 8px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.avatar-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    background-color: #050606;
+    color: white;
+    font-size: 50px;
+    border : 2px solid #2a5caa;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+p{
+    font-size: small;
+}
+
+.button-section {
+    padding: 10px;
+}
+
+.button-section button {
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 16px;
+    padding: 21px 16px;
+    margin: 24px 0px;
+    margin-left: 1px;
+    width: 32%;
+    font-size: 15px;
+    font-family: serif;
+    cursor: pointer;
+}
+
+.button-section button:hover {
+    background-color: #d0d0d0;
+}
+
+.chat-section {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.chat-section input {
+    flex: 1;
+    /* font-size: 62px; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 16px;
+}
+
+.chat-section button {
+    background-color: #2e2f30;
+    border: none;
+    border-radius: 26px;
+    /* padding: 10px 17px; */
+    margin-left: 10px;
+    color: white;
+    /* font-size: 19px; */
+    cursor: pointer;
+}
+
+.container #section button{
+    color: black;
+
+}
+
+/* more styling */
+
+.logout{
+    margin-top: 2rem;
+}
+
+#chatbox {
+    width: 70%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10%;
+}
+
+#chat-output {
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.message-box{
+    /* position: relative; */
+    display: flex;
+    justify-content: end;
+}
+
+
+
+.bot-response {
+    background-color: rgb(244, 249, 247);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-top: 10px;
+    border-radius: 1.8vw 1.8vw 0 1.5vw; /* Adjust border-radius for rounded corners */
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+    max-width: 70%;    /*Adjust max-width as per your design*/
+    margin-right: 40%; /* Ensure space between chatbox edge and message */
+    /* position: absolute; */
+    /* left: 10px; */
+}
+
+.user-message {
+    background-color: #dcf8c6; /* Adjust color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    padding-right: 0.5rem;
+    margin-top: 10px;
+    border-radius: 1.8vw 1.8vw 1.5vw 0; /* Adjust border-radius for rounded corners */
+    position: relative;
+    display: flex;
+    text-align: left;
+    /* justify-content: end; */
+    width: 30%;
+    max-width: 70%; /* Adjust max-width as per your design */
+    margin-left: 5%; /* Ensure space between chatbox edge and message */
+    /* position: absolute; */
+    /* right: 10px; */
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#info {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#visa-info {
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

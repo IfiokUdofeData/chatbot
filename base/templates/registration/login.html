@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  .input-value{
+    margin-top: 2rem;
+  }
+</style>
+{% if not request.user.is_authenticated %}
+<div class="shadow-wrap">
+ <div class="form-wrap">
+  <h3>Login </h3>
+<form method="POST">
+ {% csrf_token %}
+ <!-- {{form}} -->
+  <label for="username" class="input-value name">User Name</label>
+  <input type="text" name="username" >
+  <label for="username" class="input-value name">Password</label>
+  <input type="password" name="password">
+ <button type="submit">Submit</button>
+</form>
+<a class="signup-link" href="{% url 'signup' %}">Signup</a>
+</div>
+</div>
+{% else %}
+<div style="display: flex; flex-direction: column; font-size: xx-large;" class="out">
+  <p class="already-logged-in">You are already logged in, do you want to <a href="{% url 'logout' %}">Logout</a></p>
+  <br>
+  <p>go back to <a href="{% url 'home' %}">home page</a></p>
+</div>
+
+{% endif %}
+{% endblock content %}

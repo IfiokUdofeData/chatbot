@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa and Immigration Chatbot</title>
+    
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Visa and Immigration Chatbot</h1>
+    </header>
+
+    <main>
+        <div id="chatbox">
+            {% csrf_token %}
+            <div id="chat-output" ></div>
+            <input type="text" id="user-input" name="message" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <section id="info">
+            <h2>Visa Information</h2>
+            <button onclick="showVisaTypes()">Show Visa Types</button>
+            <div id="visa-info"></div>
+        </section>
+    </main>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        
+        *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242424;
+    color: #E4E4E4;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin: 30px; */
+    /* padding: 25px; */
+    width: 100%;
+    height: 100vh;
+    
+
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+    height: 8px;
+    background-color: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #827a7a;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-weight: 100;
+    height: 11vh;
+    width: 100%;
+    position: fixed;
+    background-color: #242424;
+    z-index: 1;
+
+}
+
+.menu{
+    margin-left: 30%;
+}
+
+.logo{
+    margin-top: 20px;
+    /* margin-left: 20px; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.left-bar{
+    display: flex;
+    justify-content: start;
+    margin-left: 8%;
+}
+
+.menu a{
+    color: #E4E4E4;
+    text-decoration: none;
+}
+
+.menu .item{
+    position: relative;
+    /* width: 100px; */
+    border-bottom-style: none;
+    /* border-color: #ffa615; */
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 25px;
+
+}
+
+
+.menu a::after{
+    margin-top: 5px;
+    content: " ";
+    height: 3px;
+    width: 0%;
+    background-color: #ffa615;
+    display: block;
+    position: absolute;
+    transition-property: width;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in;
+}
+
+.menu a:hover::after{
+    margin-top: 5px;
+    content: " ";
+    width: 60px;
+    height: 3px;
+    width: 100%;
+    background-color: #ffa615;
+    display: block;
+    position: absolute;
+}
+
+.home{
+    width: 60px;
+}
+
+.source{
+    width: 70px;
+}
+
+.AI{
+    width: 100px;
+}
+
+.contact{
+    width: 70px;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.item{
+    margin: 20px;
+}
+
+
+
+
+
+/* main page of the site */
+.image-container{
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 10vh;
+}
+.cover-photo{
+    transform: scale(1.4) scaleX(-1);
+}
+
+.main-page{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 5rem;
+}
+
+.content{
+    position: absolute;
+    top: 45vh;
+    right: 38%;
+    transform: scale(1.7);
+}
+
+.heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center; 
+}
+
+.details{
+    text-align: center;
+}
+
+.content  .details{
+    margin: 10px;
+}
+
+
+section{
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: rgb(122, 116, 116);
+    width: 100%;
+    /* box-shadow: -20px 3px 15px #030303; */
+}
+
+
+.heading .second-heading{
+    padding-top: 35px;
+
+}
+
+
+/* packages-page */
+
+.packages-page{
+    margin-top: 5rem;
+}
+.packages-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.package{
+    padding: 15px;
+}
+
+
+.image-box{
+    display: flex;
+    justify-content: center;
+}
+
+
+.image-box img{
+    height: 60vh;
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 1px #030303;
+}
+
+
+.big-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    text-align: center; 
+    padding-bottom: 15px;
+}
+
+
+.small-text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    text-align: center; 
+}
+
+
+/* third page */
+
+.sources{
+    height: 80vh;
+}
+
+.sources .heading{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.source-container-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.source-box{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.margin{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.icon{
+    color: #ffa615;
+    font-size: 6rem;
+}
+
+.icon-box{
+    position: relative;
+}
+.icon-float{
+    position: absolute;
+    color: #ffffff;
+    font-size: 4rem;
+    right: -20px;
+    bottom: 5px;
+}
+
+
+
+
+/* why choose us */
+.why-choose-us{
+    height: 150vh;
+}
+
+.icon-choose{
+    color: #ffa615;
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+.why-choose-us .source-container{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #434040;
+    box-shadow: 1px 1px 3px #030303;
+    border-radius: 5px;
+
+    height: 50vh;
+    width: 40%;
+    margin-top: 4rem;
+    padding: 3rem;
+}
+
+.why-choose-us .head-text::after{
+    margin-top: 5px;
+    content: " ";
+    height: 4px;
+    width: 100px;
+    background-color: #ffa615;
+    display: block;
+    position: absolute;
+}
+
+.head-text{
+    font-size: 1.2rem;
+    font-family: Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.more-text{
+    font-size: 1rem;
+    font-family: Tahoma, sans-serif;
+    padding: 2.5rem;
+    line-height: 2rem;
+}
+
+.why-choose-us .source-container .icon-choose{
+    padding: 5px;
+
+}
+
+.why-choose-us .source-container .source-box{
+    margin-top: -10px;
+}
+
+.why-choose-us .choose-us-2{
+    display: flex;
+
+}
+
+
+/* how can herbert help you */
+
+.help-you{
+    height: 100vh;
+}
+
+.help-you .help-you-box{
+    
+}
+
+
+.help-you .source-container{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #434040;
+    box-shadow: 1px 1px 3px #030303;
+    border-radius: 5px;
+
+    height: 50vh;
+    width: 30%;
+    margin: 2rem;
+    padding: 0px;
+}
+
+.help-you .source-box{
+    margin-top: 1rem;
+}
+
+.help-you .source-text{
+    position: relative;
+}
+
+.help-you .head-text::after{
+    margin-top: 5px;
+    content: " ";
+    height: 4px;
+    width: 100px;
+    background-color: #ffa615;
+    display: block;
+    position: absolute;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="left-bar">
+            <div class="logo">Herbert</div>
+        </div>
+
+        <div class="menu">
+            <div class="item home">  <a href=""> Home </a></div>
+            <div class="item source"><a href="#source-link">Sources</a></div>
+            <div class="item AI"> <a href="{%  url 'chatbot' %}">Herbert AI</a></div>
+            <div class="item contact"><a href="">Contact</a></div>
+        </div>
+
+    </div>
+
+    <section class="main-page">
+        <div class="image-container">
+            <img class="cover-photo" src="{% static 'back.png' %}" alt="">
+        </div>
+
+        <div class="content">
+            <div class="heading">
+                <p>Herbert</p>
+            </div>
+            <div class="details">
+                <p>Your AI Guide Through German</p>
+                <p>Imigration</p>
+            </div>
+        </div>
+       
+    </section>
+
+
+    <!-- packages page -->
+    <section class="packages-page">
+
+        <div class="heading">
+            <p class="second-heading">Lawyers are expensive, just ask Herbert</p>
+        </div>
+
+        <div class="packages-container">
+
+            <div class="package">
+                <div class="image-box">
+                    <img src="{% static 'back.png' %}" alt="">
+                </div>
+    
+                <div class="content-box">
+                    <div class="big-text">
+                        <p>Need help filling out your</p>
+                        <p>visa application ?</p>
+                    </div>
+                    <div class="small-text">
+                        <p>Herbert is able to fill out an </p>
+                        <p>application form for you</p>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="package">
+
+                <div class="image-box">
+                    <img src="{% static 'back.png' %}" alt="">
+                </div>
+    
+                <div class="content-box">
+                    <div class="big-text">
+                        <p>Need help filling out your</p>
+                        <p>visa application ?</p>
+                    </div>
+                    <div class="small-text">
+                        <p>Herbert is able to fill out an </p>
+                        <p>application form for you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package">
+
+                <div class="image-box">
+                    <img src="{% static 'back.png' %}" alt="">
+                </div>
+    
+                <div class="content-box">
+                    <div class="big-text">
+                        <p>Need help filling out your</p>
+                        <p>visa application ?</p>
+                    </div>
+                    <div class="small-text">
+                        <p>Herbert is able to fill out an </p>
+                        <p>application form for you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+
+    <!-- sources -->
+    <section class="sources" id="source-link">
+        <div class="heading">
+            <p>Our Sources</p>
+        </div>
+
+        <div class="source-container-box">
+
+            <div class="source-container">
+                <div class="source-box">
+                    <i class="fa-regular fa-file icon margin"></i>
+                    <p class="source-text">
+                        Visa Application Forms
+                    </p>
+                </div>
+            </div>
+    
+            <div class="source-container">
+                <div class="source-box">
+                    <i class="fa-solid fa-globe icon margin"></i>
+                    <p class="source-text">
+                        Visa Application Forms
+                    </p>
+                </div>
+            </div>
+    
+            <div class="source-container">
+                <div class="source-box">
+                    <div class="icon-box margin">
+                        <i class="fa-regular fa-file icon"></i>
+                        <i class="fa-solid fa-magnifying-glass icon icon-float"></i>
+                    </div>
+    
+                    <p class="source-text">
+                        Visa Application Forms
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- why choose us -->
+    <section class="why-choose-us sources">
+        <div class="heading">
+            <p>Why Choose Us</p>
+        </div>
+
+
+        <div class="source-container-box choose-us-1">
+
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Expertise in a Niche Field</p>
+                        <p class="more-text">Herbert specializes exclusively the German Residence Act, ensuring you receive precise and relevant information</p>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Up-to-Date Information</p>
+                        <p class="more-text">Herbert constantly updates his knowledge base with the latest legal developments and current jurisdiction, so you’re always informed</p>
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="source-container-box choose-us-2">
+
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">User-Friendly Guidance</p>
+                        <p class="more-text">Herbert breaks down complex information into easy-to-understand language, helping you utilize this knowledge effectively</p>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Publicly Sourced Information</p>
+                        <p class="more-text">All the data Herbert provides is from publicly available sources, ensuring transparency and reliability</p>
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+        
+    </section>
+
+
+    <!-- how can herbert help you -->
+    <section class="help-you sources">
+        <div class="heading">
+            <p>How can herbert help you?</p>
+        </div>
+
+
+        <div class="source-container-box help-you-box">
+
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Understand Your Rights</p>
+                        <p class="more-text">Whether you’re an expatriate, employer, or a legal advisor, Herbert helps you comprehend your rights and obligations under the German Residence Act</p>
+                    </p>
+                </div>
+            </div>
+    
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Stay Informed</p>
+                        <p class="more-text">With Herbert, you won’t miss out on recent changes or interpretations in the law, keeping ahead of curve</p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="source-container">
+                <div class="source-box">
+                    <p class="source-text">
+                        <p class="head-text">Make Informed Decisions</p>
+                        <p class="more-text">By providing clear explanations and practical advice, Herbert empowers you to make well-informed decisions regarding your residency status related legal matters</p>
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+        
+    </section>
+</body>
+</html>

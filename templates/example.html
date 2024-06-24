@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS API Request</title>
+    <style>
+        #loading {
+            display: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="inputField" placeholder="Enter some text">
+        <button id="sendButton">Send</button>
+        <p id="loading">Loading...</p>
+        <p id="response"></p>
+    </div>
+
+    <script src="{% static 'vanila.js' %}"></script>
+</body>
+</html>
